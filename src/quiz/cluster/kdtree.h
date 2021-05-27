@@ -47,18 +47,17 @@ struct KdTree
 
 			//if x/y value is less than x/y of current node, traverse left
 			if(point[dimm] < node->point[dimm])
-				insertHelper(*&node->left, depth+1, point, id);
+				insertHelper(node->left, depth+1, point, id);
 			//else traverse right
 			else
-				insertHelper(*&node->right, depth+1, point, id);
+				insertHelper(node->right, depth+1, point, id);
 		}
 		
 	}	
 
 	void insert(std::vector<float> point, int id)
 	{
-		// TODO: Fill in this function to insert a new point into the tree
-		// the function should create a new node and place correctly with in the root 
+		//create a new node and place within the root 
 		insertHelper(root,0,point,id);
 
 
