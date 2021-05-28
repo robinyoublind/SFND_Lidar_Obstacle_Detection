@@ -80,7 +80,8 @@ struct KdTree
 			{
 				float x_diff = x_point - x_target;
 				float y_diff = y_point - y_target;
-				float distance = sqrt(x_diff * x_diff + y_diff * y_diff);
+				float z_diff = z_point - z_target;
+				float distance = sqrt((x_diff * x_diff) + (y_diff * y_diff) + (z_diff * z_diff));
 				//add node id to ids if within distance tolerance
 				if(distance <= distanceTol)
 					ids.push_back(node->id);	
