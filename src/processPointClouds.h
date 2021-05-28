@@ -49,6 +49,6 @@ public:
 
     std::vector<std::vector<int>> euclideanCluster(const std::vector<std::vector<float>> &points, KdTree *tree, float distanceTol);
 
-    void ProcessPointClouds<PointT>::proximity(int i, const std::vector<std::vector<float>> &points, std::vector<int> &cluster, std::vector<bool> &processed, KdTree *tree, float distanceTol)
+    void ProcessPointClouds<PointT>::proximity(int i, const std::vector<std::vector<float>> &points, std::vector<int> &cluster, std::vector<bool> &processed, KdTree *tree, float distanceTol);
 };
 #endif /* PROCESSPOINTCLOUDS_H_ */
